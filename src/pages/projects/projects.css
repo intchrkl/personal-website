@@ -1,0 +1,33 @@
+.projects-page {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+  
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+  
+.project-card {
+    background: #eaeaea;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+  
+.project-card h2 {
+    margin-bottom: 0.5rem;
+}
+  
+.project-card a {
+    color: #0366d6;
+    font-weight: bold;
+    text-decoration: none;
+}
+  
+.project-card a:hover {
+    text-decoration: underline;
+}
+  
