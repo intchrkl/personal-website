@@ -1,22 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { RepoCard } from "../../components/github/RepoCard";
-
-function ContributionsHeatMap({ username }) {
-    return (
-        <>
-            <img
-                src={`https://github-contributions-api.deno.dev/${username}.svg`}
-                alt="GitHub contributions heatmap"
-                style={{ maxWidth: "100%", 
-                         marginTop: "1rem",
-                         boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
-                         borderRadius: "8px",
-                         padding: "12px 4px 4px 4px" }}
-            />
-        </>
-    )
-}
+import { RepoCard } from "./RepoCard";
+import { Contributions } from "./Contributions";
 
 function GitHubOverview(){
     const username = 'intchrkl';
@@ -47,12 +32,8 @@ function GitHubOverview(){
             })
             .catch((err) => console.error("GitHub API error: ", err))
     }, []);
-    
-    // console.log("repos: ", repos[0]);
 
-    // console.log("events:", events[0]);
-
-    // Get 4 repos I've committed to most recently
+    // Get 3 repos I've committed to most recently
     let repoIds = []
     for (const event of events) {
         if (event.type === 'PushEvent') {
@@ -69,8 +50,9 @@ function GitHubOverview(){
     return (
         <>
             <h2>GitHub</h2>
-            <ContributionsHeatMap username={username}/>
-            <div>
+            <Contributions username={username}/>
+            <h3>Stuff I've worked on recently</h3>
+            <div style={{ marginTop:"2rem" }}>
                 {repoDatas.map(repo => (
                     <RepoCard key={repo.id} repoData={repo}/>
                 ))}
