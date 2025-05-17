@@ -1,6 +1,7 @@
 import React from "react";
 import "./projects.css";
 import projectData from "../../data/projects.json";
+import { motion } from "framer-motion";
 
 function Projects() {
 
@@ -9,7 +10,14 @@ function Projects() {
       <h1>Projects</h1>
       <div className="project-list">
         {projectData.map((proj, idx) => (
-          <div key={idx} className="project-card">
+          <motion.div
+            key={idx}
+            className="project-card"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            whileHover={{ scale: 1.02 }}
+          >
             <h2>{proj.title}</h2>
             <p>{proj.description}</p>
             <p>
@@ -18,7 +26,7 @@ function Projects() {
             <a href={proj.link} target="_blank" rel="noopener noreferrer">
               {proj.linkText}→
             </a>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
