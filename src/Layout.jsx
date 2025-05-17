@@ -1,5 +1,4 @@
-// import { Header } from "./components/header/Header"
-import { Navbar } from "./components/navbar/Navbar"
+import { Header } from "./components/header/Header"
 import { Outlet } from "react-router-dom"
 import { Footer } from "./components/footer/Footer"
 import { TitleManager } from "./components/titleManager/TitleManager"
@@ -7,15 +6,16 @@ import { TitleManager } from "./components/titleManager/TitleManager"
 export function Layout() {
     return (
         <>
-            <TitleManager/>
-            {/* <Header/> */}
-            <Navbar/>
+            <TitleManager />
+            <header>
+                <Header />
+            </header>
             <main>
-                <Outlet/>
+                <Outlet />
             </main>
             <footer>
-                <Footer/>
-            </footer>           
+                <Footer />
+            </footer>
         </>
     )
 }

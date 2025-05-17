@@ -15,5 +15,5 @@ body, html, #root {
   flex-direction: column;
   min-height: 100vh;
   text-align: center;
-  padding: 4rem 1rem;
+  padding: 0;
 }

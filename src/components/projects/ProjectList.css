@@ -1,0 +1,28 @@
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+  
+.project-card {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #ccc;
+    margin-top: 1.5rem;
+}
+  
+  
+.project-card h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+  
+.project-card a {
+    color: #0366d6;
+    font-weight: bold;
+    text-decoration: none;
+}
+  
+.project-card a:hover {
+    text-decoration: underline;
+}
+  
