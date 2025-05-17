@@ -1,5 +1,5 @@
 .projects-page {
-    max-width: 800px;
+    max-width: 600px;
     margin: 2rem auto;
     padding: 1rem;
 }
@@ -11,14 +11,15 @@
 }
   
 .project-card {
-    background: #eaeaea;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #ccc;
+    margin-top: 1.5rem;
 }
+  
   
 .project-card h2 {
     margin-bottom: 0.5rem;
+    font-size: 1.25rem;
 }
   
 .project-card a {
