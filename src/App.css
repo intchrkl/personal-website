@@ -17,34 +17,3 @@ body, html, #root {
   text-align: center;
   padding: 4rem 1rem;
 }
-
-footer {
-  margin-top: auto;
-}
-
-.hero {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-}
-
-.links a {
-  margin: 0 0.75rem;
-  color: #0366d6;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-.links a:hover {
-  text-decoration: underline;
-}

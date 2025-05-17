@@ -1,4 +1,5 @@
-import reactLogo from "../../assets/react-logo.png"
+import reactLogo from "../../assets/react-logo.png";
+import "./footer.css";
 
 export function Footer() {
     return (

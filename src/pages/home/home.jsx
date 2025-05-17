@@ -1,12 +1,11 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
-import "../../App.css";
+import "./home.css";
 
 function Home() {
   return (
     <>
       <header className="hero">
-        {/* Typing animation above your name */}
         <h1 style={{ fontFamily: "monospace", marginBottom: "0.5rem" }}>
             <Typewriter
                 words={["Hello World", "I'm Intat", "Welcome!"]}
