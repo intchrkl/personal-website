@@ -13,7 +13,7 @@ function GitHubOverview() {
         const githubEventsApi = `https://api.github.com/users/${username}/events/public`;
         const githubReposApi = `https://api.github.com/users/${username}/repos`;
 
-        const delay = new Promise((res) => setTimeout(res, 800)); // ⏱️ min delay
+        const delay = new Promise((res) => setTimeout(res, 800));
 
         Promise.all([
             fetch(githubEventsApi)
