@@ -2,23 +2,40 @@
     {
         "title": "NanoGPT (Work in progress)",
         "description": "Description goes here",
-        "tech": ["pyTorch", "TensorFlow"],
-        "linkText": "View on GitHub", 
+        "tech": [
+            "pyTorch",
+            "TensorFlow"
+        ],
+        "linkText": "View on GitHub",
         "link": "https://github.com/intchrkl/nanogpt"
     },
     {
         "title": "Personal Portfolio Website - tochirakul.com",
         "description": "A clean, responsive site I built with React to share a bit about myself, my projects, and how to get in touch. It's hosted on GitHub Pages with custom routing, a custom domain, and uses many libraries for animations.",
-        "tech": ["ReactJs", "JavaScript", "HTML", "CSS", "JSON", "DNS", "GitHub Pages"],
-        "linkText": "View on GitHub", 
+        "tech": [
+            "ReactJs",
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "JSON",
+            "DNS",
+            "GitHub Pages"
+        ],
+        "linkText": "View on GitHub",
         "link": "https://github.com/intchrkl/personal-website"
     },
     {
         "title": "Crime Tracker Web App",
         "description": "A responsive full-stack web app to simulate a crime tracker portal utilizing MVC framework and OOP. Uses REST APIs to serve internal HTTP requests, update database, and trigger workflows. Features authentication and authorization, allowing users to log in and perform actions based on permissions.",
-        "tech": ["Ruby on Rails", "PostgreSQL", "REST API", "MVC", "OOP","ReactJs"],
-        "linkText": "View on GitHub", 
+        "tech": [
+            "Ruby on Rails",
+            "PostgreSQL",
+            "REST API",
+            "MVC",
+            "OOP",
+            "ReactJs"
+        ],
+        "linkText": "View on GitHub",
         "link": "https://github.com/intchrkl/crime-tracker"
     }
-  ]
-  
+]

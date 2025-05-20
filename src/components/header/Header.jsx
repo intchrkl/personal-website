@@ -4,7 +4,6 @@ export function Header() {
     return (
         <>
             <div style={{ height: "10vh" }} />
-            <Navbar />
         </>
     )
 }

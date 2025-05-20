@@ -1,21 +1,23 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
-import GitHubOverview from "../../components/github/GitHubOverview";
-import { ProjectList } from "../../components/projects/ProjectList"
 import "./home.css";
+import { motion } from "framer-motion"
 
 function Home() {
   return (
     <>
-      <Banner />
-      <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-        <Education />
-        <SocialLinks />
-        <Bio />
-        <GitHubOverview />
-        <ProjectList />
+      <div className="home-wrapper">
+        <div className="banner-wrapper">
+          <Banner />
+        </div>
+        <div className="content-wrapper">
+          <AboutMe />
+          <Line />
+          <Experience />
+          <Line />
+          <Projects />
+        </div>
       </div>
-
     </>
   );
 }
@@ -24,21 +26,63 @@ export default Home;
 
 function Banner() {
   return (
-    <>
-      <div className="banner">
-        <h1 style={{ fontFamily: "monospace", fontSize: "3rem", marginBottom: "1rem" }}>
-          <Typewriter
-            words={["Hello World", "I'm Intat", "Welcome!"]}
-            loop={Infinity}
-            cursor
-            cursorStyle="|"
-            typeSpeed={100}
-            deleteSpeed={60}
-            delaySpeed={1000}
-          />
-        </h1>
-      </div>
-    </>
+    <div className="banner">
+      <h1 style={{ fontFamily: "monospace", fontSize: "3rem", marginBottom: "1rem" }}>
+        <Typewriter
+          words={["Hello World", "I'm Intat", "Welcome!"]}
+          loop={Infinity}
+          cursor
+          cursorStyle="|"
+          typeSpeed={100}
+          deleteSpeed={60}
+          delaySpeed={1000}
+        />
+      </h1>
+    </div>
+  )
+}
+
+function Line({ color = '#414141', thickness = '1px', margin = '2rem 0' }) {
+  return (
+    <hr
+      style={{
+        border: 'none',
+        borderTop: `${thickness} solid ${color}`,
+        margin,
+        width: '100%',
+      }}
+    />
+  );
+}
+
+
+function AboutMe() {
+  return (
+    <motion.div className="about-me" style={{ textAlign: "left" }}>
+      <h1>About Me</h1>
+      <p>Hello! I'm Intat and I am currently an undergraduate student in Information Systems with a minor in Computer Science at Carnegie Mellon University. Hello! I'm Intat and I am currently an undergraduate student in Information Systems with a minor in Computer Science at Carnegie Mellon University. Hello! I'm Intat and I am currently an undergraduate student in Information Systems with a minor in Computer Science at Carnegie Mellon University. Hello! I'm Intat and I am currently an undergraduate student in Information Systems with a minor in Computer Science at Carnegie Mellon University. </p>
+    </motion.div>
+  )
+}
+
+function Experience() {
+  return (
+    <motion.div className="experience" style={{ textAlign: "left" }}>
+      <h1>Experience</h1>
+      <p>Hello! I'm Intat and I am currently an undergraduate student in Information Systems with a minor in Computer Science at Carnegie Mellon University. Hello! I'm Intat and I am currently an undergraduate student in Information Systems with a minor in Computer Science at Carnegie Mellon University. Hello! I'm Intat and I am currently an undergraduate student in Information Systems with a minor in Computer Science at Carnegie Mellon University. Hello! I'm Intat and I am currently an undergraduate student in Information Systems with a minor in Computer Science at Carnegie Mellon University. </p>
+    </motion.div>
+  )
+}
+
+function Projects() {
+  return (
+    <motion.div className="projects" style={{ textAlign: "left" }}>
+      <h1>My Projects</h1>
+      <p>Here's some stuff I've worked on recently!</p>
+      <motion.div className="project-list">
+        
+      </motion.div>
+    </motion.div>
   )
 }
 
@@ -79,7 +123,7 @@ function SocialLinks() {
 function Bio() {
   return (
     <>
-      <div className="bio" style={{ fontSize:"20px", textAlign:"justify" }}>
+      <div className="bio" style={{ fontSize: "20px", textAlign: "justify" }}>
         <p>
           Hi, my name is Intat and I am currently a senior undergraduate
           student in Information Systems with a Minor in Computer Science
