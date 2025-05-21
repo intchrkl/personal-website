@@ -1,10 +1,12 @@
 .project-list {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2rem;
 }
   
 .project-card {
+    width: 90%;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid #ccc;
     margin-top: 1.5rem;
