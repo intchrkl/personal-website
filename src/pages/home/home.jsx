@@ -33,7 +33,7 @@ function Banner() {
     <div className="banner">
       <h1 style={{ fontFamily: "monospace", fontSize: "3rem", marginBottom: "1rem" }}>
         <Typewriter
-          words={["In Development...", "Hello World", "I'm Intat", "Welcome!"]}
+          words={["In Development...", "Hello World", "I'm Intat", "Welcome!", "Ver. V"]}
           loop={Infinity}
           cursor
           cursorStyle="|"
