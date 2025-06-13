@@ -2,7 +2,7 @@
     {
         "title": "NanoGPT",
         "repoName": "nanogpt",
-        "description": "A small implementation of a GPT-style language model based on Andrej Karpathy's NanoGPT design. Written using PyTorch. ",
+        "description": "A small implementation of a GPT-style language model based on Andrej Karpathy's NanoGPT design with elements from Attention Is All You Need (Vaswani et al). Written using PyTorch. ",
         "tech": [
             "pyTorch",
             "TensorFlow"
@@ -11,7 +11,18 @@
         "link": "https://github.com/intchrkl/nanogpt"
     },
     {
-        "title": "Personal Portfolio Website - tochirakul.com",
+        "title": "MNIST Digit Recognition",
+        "repoName": "digit-recog",
+        "description": "A Neural Network trained on MNIST data to recognize number handwriting. Built from scratch using numPy.",
+        "tech": [
+            "NumPy",
+            "Neural Networks"
+        ],
+        "linkText": "View on GitHub",
+        "link": "https://github.com/intchrkl/digit-recog"
+    },
+    {
+        "title": "Personal Website - tochirakul.com",
         "repoName": "personal-website",
         "description": "A clean, responsive site I built with React to share a bit about myself, my projects, and how to get in touch. It's hosted on GitHub Pages with custom routing, a custom domain, and uses many libraries for animations.",
         "tech": [
@@ -40,13 +51,5 @@
         ],
         "linkText": "View on GitHub",
         "link": "https://github.com/intchrkl/crime-tracker"
-    },
-    {
-        "title": "Spotitector",
-        "description": "test",
-        "tech": [
-            "Python"
-        ],
-        "linkText": "View on GitHub"
     }
 ]
