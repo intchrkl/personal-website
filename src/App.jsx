@@ -16,8 +16,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
-            <Route path="/redirects/:target" element={<RedirectPage />} />
           </Route>
+          {/* For custom redirects - to remove url conflicts with existing pages */}
+          <Route path="/:target" element={<RedirectPage />} />
         </Routes>
       </div>
     </Router>
