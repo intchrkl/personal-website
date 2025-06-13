@@ -19,7 +19,7 @@ export function Contributions({ username }) {
                         src={`https://github-contributions-api.deno.dev/${username}.svg`}
                         alt="GitHub contributions heatmap"
                         style={{
-                            maxWidth: "630px",
+                            maxWidth: "100%",
                             marginTop: "1rem",
                             borderRadius: "8px",
                             padding: "12px 4px 4px 4px"

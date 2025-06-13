@@ -7,7 +7,7 @@ function About() {
     return (
         <>
             <h1>About Me</h1>
-            <div className="about-me">
+            <div className="about">
                 <p>
                     Hi, my name is Intat and I am currently a senior undergraduate
                     student in Information Systems with a Minor in Computer Science 

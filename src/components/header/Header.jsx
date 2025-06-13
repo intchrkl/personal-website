@@ -1,7 +1,9 @@
+import { Navbar } from "../navbar/Navbar"
+
 export function Header() {
     return (
         <>
-            <h1>Header</h1>
+            <div style={{ height: "10vh" }} />
         </>
     )
 }

@@ -1,11 +1,12 @@
 .navbar {
-    background-color: #f9f9f9;
-    border-bottom: 1px solid #ddd;
+    background-color: #4d4d4d;
+    /* border-bottom: 1px solid #ddd; */
     padding: 1rem 2rem;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   }
   
 .navbar-links {
@@ -16,21 +17,21 @@
 }
   
 .navbar a {
-    color: #0366d6;
+    color: #e0e0e0;
     text-decoration: none;
     font-weight: 600;
     position: relative;
 }
   
   .navbar a:hover {
-    color: #023e8a;
+    color: #d3d3d3;
 }
   
 .navbar a::after {
     content: "";
     display: block;
     height: 2px;
-    background-color: #0366d6;
+    background-color: #e0e0e0;
     transition: width 0.3s;
     width: 0;
 }

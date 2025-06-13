@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./RepoCard.css";
 import { motion } from "framer-motion";
+import { RepoLanguages } from "./RepoLanguages"
 
 export function RepoCard({ repoData }) {
     const [languages, setLanguages] = useState({});
@@ -71,6 +72,8 @@ export function RepoCard({ repoData }) {
                     ))}
                 </div>
             )}
+
+            {/* {totalBytes > 0 && RepoLanguages(totalBytes, sortedLanguages)} */}
 
             <div className="repo-meta" style={{ marginTop: "1rem" }}>
                 <span>
