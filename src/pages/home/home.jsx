@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import projectData from "../../data/projects.json";
 import { RepoLanguages } from "../../components/github/RepoLanguages"
 import { useState, useEffect } from "react";
+import { Banner } from "../../components/banner/Banner";
 
 function Home() {
   return (
@@ -27,24 +28,6 @@ function Home() {
 }
 
 export default Home;
-
-function Banner() {
-  return (
-    <div className="banner">
-      <h1 style={{ fontFamily: "monospace", fontSize: "3rem", marginBottom: "1rem" }}>
-        <Typewriter
-          words={["In Development...", "Hello World", "I'm Intat", "Welcome!", "Ver. V"]}
-          loop={Infinity}
-          cursor
-          cursorStyle="|"
-          typeSpeed={100}
-          deleteSpeed={60}
-          delaySpeed={1000}
-        />
-      </h1>
-    </div>
-  )
-}
 
 function Line({ color = '#414141', thickness = '1px', margin = '2rem 0' }) {
   return (
