@@ -6,10 +6,12 @@ import projectData from "../../data/projects.json";
 import { RepoLanguages } from "../../components/github/RepoLanguages"
 import { useState, useEffect } from "react";
 import { Banner } from "../../components/banner/Banner";
+import { ScrollIndicator } from "../../components/scroll/scroll"
 
 function Home() {
   return (
     <>
+      <ScrollIndicator />
       <div className="home-wrapper">
         <div className="banner-wrapper">
           <Banner />
