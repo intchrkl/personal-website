@@ -97,7 +97,8 @@ p {
 
 .project-card h2 {
   margin-bottom: 0.5rem;
-  font-size: 1.25rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
 }
 
 .project-card a {
