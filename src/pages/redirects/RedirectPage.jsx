@@ -33,7 +33,7 @@ export default function RedirectPage() {
     if (redirects && redirects[target]) {
       const timeout = setTimeout(() => {
         window.location.replace(redirects[target]);
-      }, 500);
+      }, 300);
       return () => clearTimeout(timeout);
     }
   }, [redirects, target]);

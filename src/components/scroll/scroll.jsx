@@ -13,11 +13,12 @@ export function ScrollIndicator() {
                     right: 0,
                     height: 10,
                     originX: 0,
-                    backgroundColor: "#212020",
-                    boxShadow: "0 2px 8px rgba(0, 0, 0, 0.3)",
+                    backgroundColor: "rgba(36, 36, 36, 0.8)",
+                    // boxShadow: "0 2px 8px rgba(0, 0, 0, 0.3)",
                     backdropFilter: "blur(4px)",
-                    WebkitBackdropFilter: "blur(4px)", // for Safari support
+                    WebkitBackdropFilter: "blur(4px)",
                     zIndex: 1000,
+                    top: "var(--navbar-height)",
                 }}
             />
     )

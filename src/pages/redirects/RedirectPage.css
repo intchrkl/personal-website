@@ -15,7 +15,7 @@
 .redirect-text {
   font-size: 1.2rem;
   margin-bottom: 16px;
-  color: #333;
+  color: #ccc;
 }
 
 .spinner {
@@ -23,6 +23,6 @@
   height: 70px;
   border-radius: 50%;
   border: 10px solid #ccc;
-  border-top-color: #ff0088;
+  border-top-color: #409a87;
   will-change: transform;
 }

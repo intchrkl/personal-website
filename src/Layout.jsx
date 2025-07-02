@@ -7,16 +7,16 @@ import { TitleManager } from "./components/titleManager/TitleManager"
 export function Layout() {
     return (
         <>
-            <TitleManager />
+            {/* <TitleManager /> */}
             <header>
-                <Header />
+                {/* <Header /> */}
                 {/* <Navbar /> */}
             </header>
             <main>
                 <Outlet />
             </main>
             <footer>
-                <Footer />
+                {/* <Footer /> */}
             </footer>
         </>
     )

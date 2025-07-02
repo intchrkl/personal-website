@@ -17,3 +17,14 @@ body, html, #root {
   text-align: center;
   padding: 0;
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(135deg, #0f2027, #203a43, #1d3742);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overscroll-behavior: none;
+  
+}

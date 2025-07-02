@@ -39,6 +39,10 @@ p {
 
 .home-wrapper {
   padding: 0 1rem;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0f2027, #203a43, #1d3742);
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .banner-wrapper {
@@ -178,4 +182,47 @@ p {
   height: 12px;
   border-radius: 2px;
   display: inline-block;
+}
+
+.hero-section {
+  padding: 100px 2rem 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  min-height: 60vh;
+}
+
+.hero-content {
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+.hero-image {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background-color: #ddd;
+  flex-shrink: 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-text {
+  max-width: 500px;
+  color: white;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
 }

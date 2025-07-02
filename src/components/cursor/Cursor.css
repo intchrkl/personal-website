@@ -1,0 +1,21 @@
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease, width 0.15s ease, height 0.15s ease;
+    mix-blend-mode: difference;
+  }
+  
+  .custom-cursor.hovering {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  

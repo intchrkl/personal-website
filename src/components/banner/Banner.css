@@ -1,28 +1,19 @@
-.banner {
-  padding: 4rem 1rem;
-  /* background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5); */
-  /* background: linear-gradient(135deg, #ff7e5f, #feb47b); */
-  /* background: linear-gradient(135deg, #a18cd1, #fbc2eb); */
-  /* background: linear-gradient(135deg, #43cea2, #185a9d); */
-  /* background: linear-gradient(135deg, #ff4e50, #f9d423); */
-  background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
-  /* background: linear-gradient(135deg, #667eea, #764ba2); */
-  background-size: 300% 300%;
-  animation: gradientShift 10s ease infinite;
+.navbar-links {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #FFFAF1;
-  border-radius: 18px;
-  box-shadow:
-    inset 0 4px 4px rgba(0, 0, 0, 0.25),   /* Inner shadow from top */
-    inset 0 -4px 4px rgba(0, 0, 0, 0.25)  /* Inner shadow from bottom */ 
+  gap: 1rem;
 }
 
-.banner h1 {
-  font-family: monospace;
-  font-size: clamp(1rem, 5vw, 2.5rem);
-  margin-bottom: 1rem;
-  line-height: 1.2;
-  text-align: center;
+.nav-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
