@@ -1,45 +1,86 @@
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    background-color: rgba(36, 36, 36, 0.8);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* <-- fixes spacing */
-    padding: 0 2rem;
-    z-index: 1000;
-    color: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: auto;
+  padding: 0.75rem 1.5rem;
+  background-color: rgba(36, 36, 36, 0.8);
+  backdrop-filter: blur(6px);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  position: relative;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-logo {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+}
+
+.navbar-brand {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  white-space: nowrap;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  color: white;
+}
+
+/* Links */
+.navbar-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-button {
+  background-color: rgba(36, 36, 36, 0.0);
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
   }
-  
-  .navbar-brand {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: white;
-    white-space: nowrap;
-  }
-  
+
   .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+    gap: 0.75rem;
+  }
+
+  .navbar-links.open {
     display: flex;
-    gap: 1rem;
   }
-  
+
   .nav-button {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 0.4rem 1rem;
-    border-radius: 6px;
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: background-color 0.2s ease;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    text-align: left;
   }
-  
-  .nav-button:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
+}
