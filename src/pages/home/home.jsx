@@ -1,7 +1,7 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import "./home.css";
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import projectData from "../../data/projects.json";
 import { RepoLanguages } from "../../components/github/RepoLanguages"
 import { useState, useEffect, useRef } from "react";
@@ -11,6 +11,7 @@ import { Navbar } from "../../components/navbar/Navbar";
 import { ProjectGallery } from "../../components/projectGallery/ProjectGallery";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
+import { FiChevronRight } from "react-icons/fi";
 
 
 function Home() {
@@ -18,60 +19,146 @@ function Home() {
     <>
       <Navbar />
       <BannerSection />
+      <ExperienceSection />
       {/* <ProjectsSection /> */}
     </>
   );
 }
 
 function ProjectsSection() {
-  const [activeIndex, setActiveIndex] = useState(null);
-  const containerRef = useRef(null);
-
-  const projects = projectData; // placeholder for 5 cards
-
-  useEffect(() => {
-    function handleClickOutside(e) {
-      if (
-        containerRef.current &&
-        !containerRef.current.contains(e.target)
-      ) {
-        setActiveIndex(null);
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  const placeholderProjects = Array.from({ length: 5 });
 
   return (
     <section className="projects-section" id="projects">
-      <h2 className="projects-title">Projects</h2>
-      <div className="projects-list" ref={containerRef}>
-        {projects.map((proj, index) => (
-          <motion.div
-            key={index}
-            className="project-card"
-            onClick={() => setActiveIndex(index)}
-            animate={{
-              scale: activeIndex === index ? 1.7 : 1,
-              zIndex: activeIndex === index ? 10 : 1,
-            }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          >
-            <h3>{proj.title}</h3>
-            <p>{proj.description}</p>
-            {proj.link && (
-              <a
-                href={proj.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-link"
-              >
-                Visit ↗
-              </a>
-            )}
-          </motion.div>
+      <h2 className="section-title">Projects</h2>
+      <div className="project-carousel">
+        {placeholderProjects.map((_, index) => (
+          <div key={index} className="project-card">
+            <div className="card-placeholder">Project {index + 1}</div>
+          </div>
         ))}
+      </div>
+    </section>
+  );
+}
+
+
+const experiences = [
+  {
+    company: "Accenture",
+    title: "Intern",
+    duration: "May 2025 - Aug 2025",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac rhoncus quam. Fringilla quam urna.",
+  },
+  {
+    company: "Coda Payments",
+    title: "SWE Intern",
+    duration: "May 2024 - Aug 2024",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac rhoncus quam. Fringilla quam urna.",
+  },
+  {
+    company: "CMU School of Computer Science",
+    title: "Teaching Assistant",
+    duration: "Aug 2023 - Present",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac rhoncus quam. Fringilla quam urna.",
+  },
+];
+
+function ExperienceSection() {
+  const [activeIndexes, setActiveIndexes] = useState([0]);
+
+  const toggle = (index) => {
+    setActiveIndexes((prev) =>
+    prev.includes(index)
+      ? prev.filter((i) => i !== index)
+      : [...prev, index]
+  );
+  };
+
+  return (
+    <section className="experience-section" id="experience">
+      <div className="experience-layout">
+        <h2 className="section-title">Experience</h2>
+        <div className="accordion">
+          {experiences.map((exp, index) => {
+            const isOpen = activeIndexes.includes(index);
+
+            return (
+              <motion.div
+                key={index}
+                layout
+                initial={false}
+                className="accordion-item"
+                transition={{ layout: { duration: 0.3, ease: "easeInOut" } }}
+                style={{
+                  borderRadius: "12px",
+                  padding: "1rem",
+                  backgroundColor: "#212020",
+                  boxShadow: isOpen
+                    ? "0 4px 12px rgba(0,0,0,0.06)"
+                    : "0 2px 6px rgba(0,0,0,0.03)",
+                }}
+                onClick={() => toggle(index)}
+              >
+                <motion.header
+                  layout="position"
+                  className="accordion-header"
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    cursor: "pointer",
+                    fontSize: "1.1rem",
+                    fontWeight: 600,
+                    color: "white"
+                  }}
+                >
+                  <div>
+                    {exp.title} | <strong>{exp.company}</strong>
+                  </div>
+                  <motion.div
+                    animate={{ rotate: isOpen ? 90 : 0 }}
+                    transition={{ duration: 0.3 }}
+                    style={{ fontSize: "1.2rem" }}
+                  >
+                    <FiChevronRight />
+                  </motion.div>
+                </motion.header>
+
+                <AnimatePresence>
+                  {isOpen && (
+                    <motion.div
+                      key="content"
+                      initial="collapsed"
+                      animate="open"
+                      exit="collapsed"
+                      variants={{
+                        open: { opacity: 1, height: "auto" },
+                        collapsed: { opacity: 0, height: 0 },
+                      }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      style={{ overflow: "hidden" }}
+                    >
+                      <div style={{ paddingTop: "0.75rem", color: "white" }}>
+                        <p
+                          style={{
+                            fontSize: "0.85rem",
+                            fontStyle: "italic",
+                            color: "white",
+                            marginBottom: "0.25rem",
+                          }}
+                        >
+                          {exp.duration}
+                        </p>
+                        <p>{exp.description}</p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

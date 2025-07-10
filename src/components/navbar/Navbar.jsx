@@ -17,7 +17,9 @@ export function Navbar() {
     <nav className="navbar">
       <div className="navbar-left">
         {/* <img src="/it_logo.png" alt="Logo" className="navbar-logo" /> */}
-        <div className="navbar-brand">Intat Tochirakul</div>
+        <div className="navbar-brand">
+          <a href="#home">Intat Tochirakul</a>
+          </div>
       </div>
 
       <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>

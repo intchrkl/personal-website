@@ -1,17 +1,20 @@
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  height: auto;
   padding: 0.75rem 1.5rem;
   background-color: rgba(36, 36, 36, 0.8);
   backdrop-filter: blur(6px);
   color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
-  position: relative;
 }
+
 
 .navbar-left {
   display: flex;
@@ -25,21 +28,20 @@
   object-fit: contain;
 }
 
-.navbar-brand {
+.navbar-brand a {
   font-size: 1.2rem;
   font-weight: bold;
   color: white;
   white-space: nowrap;
+  text-decoration: none;
 }
 
-/* Hamburger Icon */
 .hamburger {
   display: none;
   cursor: pointer;
   color: white;
 }
 
-/* Links */
 .navbar-links {
   display: flex;
   gap: 1rem;
