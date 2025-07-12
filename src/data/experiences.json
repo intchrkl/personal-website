@@ -1,0 +1,20 @@
+[
+  {
+    "company": "Accenture",
+    "title": "Intern",
+    "duration": "May 2025 - Aug 2025",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac rhoncus quam. Fringilla quam urna."
+  },
+  {
+    "company": "Coda Payments",
+    "title": "SWE Intern",
+    "duration": "May 2024 - Aug 2024",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac rhoncus quam. Fringilla quam urna."
+  },
+  {
+    "company": "CMU School of Computer Science",
+    "title": "Teaching Assistant",
+    "duration": "Aug 2023 - Present",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac rhoncus quam. Fringilla quam urna."
+  }
+]

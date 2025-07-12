@@ -12,6 +12,7 @@ import { ProjectGallery } from "../../components/projectGallery/ProjectGallery";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import { FiChevronRight } from "react-icons/fi";
+import experiences from "../../data/experiences.json"
 
 
 function Home() {
@@ -31,48 +32,31 @@ function ProjectsSection() {
   return (
     <section className="projects-section" id="projects">
       <h2 className="section-title">Projects</h2>
-      <div className="project-carousel">
-        {placeholderProjects.map((_, index) => (
-          <div key={index} className="project-card">
-            <div className="card-placeholder">Project {index + 1}</div>
-          </div>
-        ))}
+      <div className="carousel-container">
+        <div className="carousel">
+          {placeholderProjects.map((_, index) => (
+            <div key={index} className="project-card">
+              <div className="project-thumbnail" />
+              <h3 className="project-title">Project {index + 1}</h3>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
 }
 
 
-const experiences = [
-  {
-    company: "Accenture",
-    title: "Intern",
-    duration: "May 2025 - Aug 2025",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac rhoncus quam. Fringilla quam urna.",
-  },
-  {
-    company: "Coda Payments",
-    title: "SWE Intern",
-    duration: "May 2024 - Aug 2024",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac rhoncus quam. Fringilla quam urna.",
-  },
-  {
-    company: "CMU School of Computer Science",
-    title: "Teaching Assistant",
-    duration: "Aug 2023 - Present",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac rhoncus quam. Fringilla quam urna.",
-  },
-];
 
 function ExperienceSection() {
   const [activeIndexes, setActiveIndexes] = useState([0]);
 
   const toggle = (index) => {
     setActiveIndexes((prev) =>
-    prev.includes(index)
-      ? prev.filter((i) => i !== index)
-      : [...prev, index]
-  );
+      prev.includes(index)
+        ? prev.filter((i) => i !== index)
+        : [...prev, index]
+    );
   };
 
   return (
@@ -114,7 +98,7 @@ function ExperienceSection() {
                   }}
                 >
                   <div>
-                    {exp.title} | <strong>{exp.company}</strong>
+                    <span style={{ fontWeight: 400 }}>{exp.title}</span> | <strong>{exp.company}</strong>
                   </div>
                   <motion.div
                     animate={{ rotate: isOpen ? 90 : 0 }}
@@ -146,11 +130,12 @@ function ExperienceSection() {
                             fontStyle: "italic",
                             color: "white",
                             marginBottom: "0.25rem",
+                            textAlign: "left"
                           }}
                         >
-                          {exp.duration}
+                          {exp["duration"]}
                         </p>
-                        <p>{exp.description}</p>
+                        <p style={{ textAlign: "left" }}>{exp["description"]}</p>
                       </div>
                     </motion.div>
                   )}
