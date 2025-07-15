@@ -1,20 +1,26 @@
 [
   {
     "company": "Accenture",
+    "logo": "/logos/accenture-logo.jpg",
     "title": "Intern",
     "duration": "May 2025 - Aug 2025",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac rhoncus quam. Fringilla quam urna."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac rhoncus quam. Fringilla quam urna.",
+    "link": "https://www.accenture.com"
   },
   {
     "company": "Coda Payments",
+    "logo": "/logos/coda-logo.jpg",
     "title": "SWE Intern",
     "duration": "May 2024 - Aug 2024",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac rhoncus quam. Fringilla quam urna."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac rhoncus quam. Fringilla quam urna.",
+    "link": "https://www.coda.co/"
   },
   {
     "company": "CMU School of Computer Science",
+    "logo": "/logos/scs-logo.jpg",
     "title": "Teaching Assistant",
     "duration": "Aug 2023 - Present",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac rhoncus quam. Fringilla quam urna."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac rhoncus quam. Fringilla quam urna.",
+    "link": "https://www.cs.cmu.edu/~15122/"
   }
 ]

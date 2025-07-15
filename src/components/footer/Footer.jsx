@@ -1,4 +1,3 @@
-import reactLogo from "../../assets/react-logo.png";
 import "./footer.css";
 
 export function Footer() {
@@ -13,7 +12,7 @@ export function Footer() {
                 marginBottom: "1rem"
             }}>
                 <h4 style={{ margin: 0 }}>Built with React</h4>
-                <img src={reactLogo} alt="ReactJs logo" width="20" height="20" />
+                <img src="/logos/react-logo.png" alt="ReactJs logo" width="20" height="20" />
             </div>
         </>
     )

@@ -11,8 +11,9 @@ import { Navbar } from "../../components/navbar/Navbar";
 import { ProjectGallery } from "../../components/projectGallery/ProjectGallery";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
-import { FiChevronRight } from "react-icons/fi";
+import { FiChevronRight, FiChevronDown } from "react-icons/fi";
 import experiences from "../../data/experiences.json"
+
 
 
 function Home() {
@@ -20,9 +21,25 @@ function Home() {
     <>
       <Navbar />
       <BannerSection />
+      <AboutSection />
       <ExperienceSection />
       {/* <ProjectsSection /> */}
     </>
+  );
+}
+
+function AboutSection() {
+  return (
+    <section className="about-section" id="about">
+      <div className="about-layout">
+        <h2 className="section-title">About Me</h2>
+        <div className="about-content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae nunc ut libero vestibulum accumsan. Praesent et purus vel massa tincidunt tincidunt ut in ligula. Proin eget dapibus lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+          </p>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -49,100 +66,76 @@ function ProjectsSection() {
 
 
 function ExperienceSection() {
-  const [activeIndexes, setActiveIndexes] = useState([0]);
-
-  const toggle = (index) => {
-    setActiveIndexes((prev) =>
-      prev.includes(index)
-        ? prev.filter((i) => i !== index)
-        : [...prev, index]
-    );
-  };
-
   return (
     <section className="experience-section" id="experience">
       <div className="experience-layout">
         <h2 className="section-title">Experience</h2>
-        <div className="accordion">
-          {experiences.map((exp, index) => {
-            const isOpen = activeIndexes.includes(index);
-
-            return (
-              <motion.div
-                key={index}
-                layout
-                initial={false}
-                className="accordion-item"
-                transition={{ layout: { duration: 0.3, ease: "easeInOut" } }}
-                style={{
-                  borderRadius: "12px",
-                  padding: "1rem",
-                  backgroundColor: "#212020",
-                  boxShadow: isOpen
-                    ? "0 4px 12px rgba(0,0,0,0.06)"
-                    : "0 2px 6px rgba(0,0,0,0.03)",
-                }}
-                onClick={() => toggle(index)}
+        <div className="experience-cards">
+          {experiences.map((exp, index) => (
+            <div
+              key={index}
+              className="experience-card"
+              style={{
+                borderRadius: "12px",
+                padding: "1rem",
+                backgroundColor: "#212020",
+                boxShadow: "inset 0 2px 8px rgba(0, 0, 0, 0.3)",
+                display: "flex",
+                gap: "2rem",
+                alignItems: "flex-start",
+              }}
+            >
+              <a
+                href={exp.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: "flex", alignItems: "center", gap: "1rem", textDecoration: "none", color: "inherit" }}
               >
-                <motion.header
-                  layout="position"
-                  className="accordion-header"
+                <img
+                  src={exp.logo}
+                  alt={`${exp.company} logo`}
                   style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    cursor: "pointer",
-                    fontSize: "1.1rem",
-                    fontWeight: 600,
-                    color: "white"
+                    width: "80px",
+                    height: "80px",
+                    objectFit: "contain",
+                    borderRadius: "8px",
+                    backgroundColor: "#fff",
+                    flexShrink: 0,
+                    marginTop: "0.5rem",
+                    marginLeft: "0.5rem"
+                  }}
+                />
+              </a>
+              <div style={{ color: "white", marginTop: "0.5rem" }}>
+                <a
+                  href={exp.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ display: "flex", alignItems: "center", gap: "1rem", textDecoration: "none", color: "inherit" }}
+                >
+                  <div style={{ fontSize: "1.1rem", fontWeight: 600, textAlign: "left" }}>
+                    <span style={{
+                      fontWeight: 400,
+                      textAlign: "left"
+                    }}>{exp.title}</span>
+                    {" "} | <strong>{exp.company}</strong>
+                  </div>
+                </a>
+                <p
+                  style={{
+                    fontSize: "0.85rem",
+                    fontStyle: "italic",
+                    marginBottom: "0.25rem",
+                    textAlign: "left",
+                    color: "white",
                   }}
                 >
-                  <div>
-                    <span style={{ fontWeight: 400 }}>{exp.title}</span> | <strong>{exp.company}</strong>
-                  </div>
-                  <motion.div
-                    animate={{ rotate: isOpen ? 90 : 0 }}
-                    transition={{ duration: 0.3 }}
-                    style={{ fontSize: "1.2rem" }}
-                  >
-                    <FiChevronRight />
-                  </motion.div>
-                </motion.header>
-
-                <AnimatePresence>
-                  {isOpen && (
-                    <motion.div
-                      key="content"
-                      initial="collapsed"
-                      animate="open"
-                      exit="collapsed"
-                      variants={{
-                        open: { opacity: 1, height: "auto" },
-                        collapsed: { opacity: 0, height: 0 },
-                      }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
-                      style={{ overflow: "hidden" }}
-                    >
-                      <div style={{ paddingTop: "0.75rem", color: "white" }}>
-                        <p
-                          style={{
-                            fontSize: "0.85rem",
-                            fontStyle: "italic",
-                            color: "white",
-                            marginBottom: "0.25rem",
-                            textAlign: "left"
-                          }}
-                        >
-                          {exp["duration"]}
-                        </p>
-                        <p style={{ textAlign: "left" }}>{exp["description"]}</p>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-            );
-          })}
+                  {exp.duration}
+                </p>
+                <p style={{ textAlign: "left", color: "white" }}>{exp.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -158,7 +151,7 @@ function BannerSection() {
         <div className="hero-text">
           <h1 style={{
             fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
-            fontWeight: 500,
+            fontWeight: 400,
             fontSize: "3rem",
             marginBottom: "1rem",
           }}>
@@ -202,7 +195,6 @@ function BannerSection() {
               Email
             </a>
           </div>
-
         </div>
       </div>
     </section>
