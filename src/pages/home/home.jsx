@@ -23,7 +23,7 @@ function Home() {
       <BannerSection />
       <AboutSection />
       <ExperienceSection />
-      {/* <ProjectsSection /> */}
+      <ProjectsSection />
     </>
   );
 }
@@ -43,18 +43,29 @@ function AboutSection() {
   );
 }
 
-function ProjectsSection() {
-  const placeholderProjects = Array.from({ length: 5 });
+const projects = [
+  {
+    title: "NanoGPT",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed lectus et urna tincidunt euismod.",
+    image: "https://via.placeholder.com/600x300", // placeholder image
+    link: "#",
+    github: "#"
+  }
+  // Add more projects here
+];
 
+function ProjectsSection() {
   return (
     <section className="projects-section" id="projects">
-      <h2 className="section-title">Projects</h2>
-      <div className="carousel-container">
-        <div className="carousel">
-          {placeholderProjects.map((_, index) => (
+      <div className="projects-layout">
+        <h2 className="section-title">Projects</h2>
+        <div className="project-list">
+          {projects.map((project, index) => (
             <div key={index} className="project-card">
-              <div className="project-thumbnail" />
-              <h3 className="project-title">Project {index + 1}</h3>
+              {/* <div className="project-thumbnail" /> */}
+              <h3 className="project-title">{project.title}</h3>
+              <p className="project-description">{project.description}</p>
             </div>
           ))}
         </div>
@@ -62,6 +73,7 @@ function ProjectsSection() {
     </section>
   );
 }
+
 
 
 
