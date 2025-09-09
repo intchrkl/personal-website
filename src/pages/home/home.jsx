@@ -70,24 +70,33 @@ function ProjectsSection() {
         <div className="project-list">
           {projects.map((project, index) => (
             <div key={index} className="project-card">
-              <div className="project-thumbnail">
+              {project.image && (<div className="project-thumbnail">
                 <img
                   src={project.image}
                   alt={`${project.title} thumbnail`}
-                  style={{ width: "100%", borderRadius: "8px" }}
+                  className="project-image"
                 />
-              </div>
-              <br />
+              </div>)}
+              {project.image && (<br />)}
               <h3 className="project-title">{project.title}</h3>
               <p className="project-description">{project.description}</p>
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-button"
-                >
-                View on GitHub
-              </a>
+              {/* {Array.isArray(project.tags) && (<br />)} */}
+              {Array.isArray(project.tags) && project.tags.length > 0 && (
+                <div className="project-tags">
+                  {project.tags.join(", ")}
+                </div>
+              )}
+              {Array.isArray(project.tags) && (<br />)}
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-button"
+                  >
+                  View on GitHub
+                </a>
+              )}
             </div>
           ))}
         </div>
@@ -179,6 +188,7 @@ function ExperienceSection() {
 
 function BannerSection() {
   return (
+    <div id="home">
     <section className="hero-section">
       <div className="hero-content">
         <img src="/me.jpg" alt="Me" className="hero-image" />
@@ -232,7 +242,9 @@ function BannerSection() {
         </div>
       </div>
     </section>
+    </div>
   );
+  
 }
 
 export default Home;

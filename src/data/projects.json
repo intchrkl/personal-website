@@ -3,8 +3,12 @@
       "title": "NanoGPT",
       "description":
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed lectus et urna tincidunt euismod.",
-      "image": "asd",
-      "github": "https://github.com/intchrkl/nanogpt"
+      "image": "/transformer.png",
+      "github": "https://github.com/intchrkl/nanogpt",
+      "tags": [
+        "pyTorch",
+        "TensorFlow"
+        ]
     },
   
     {
@@ -12,6 +16,73 @@
       "description":
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed lectus et urna tincidunt euismod.",
       "image": "/mnist_img.png",
-      "github": "https://github.com/intchrkl/digit-recog"
+      "github": "https://github.com/intchrkl/digit-recog",
+      "tags": [
+        "NumPy",
+        "Neural Networks"
+      ]
+    },
+    {
+        "title": "Personal Website - tochirakul.com",
+        "description":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed lectus et urna tincidunt euismod.",
+        "github": "https://github.com/intchrkl/personal-website",
+        "tags": [
+            "ReactJs",
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "JSON",
+            "DNS",
+            "Vercel"
+        ]
+    },
+    {
+        "title": "Crime Tracker Portal",
+        "description":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed lectus et urna tincidunt euismod.",
+        "github": "https://github.com/intchrkl/crime-tracker",
+        "tags": [
+            "Ruby on Rails",
+            "PostgreSQL",
+            "REST API",
+            "MVC",
+            "OOP",
+            "ReactJs"
+        ]
+    },
+    {
+        "title": "Computer Systems Simulator",
+        "description":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed lectus et urna tincidunt euismod.",
+        "tags": [
+            "C",
+            "Unix",
+            "Concurrency",
+            "HTTP",
+            "Proxy Servers",
+            "Process Control"
+        ]
+    },
+    {
+        "title": "TikTok Relational Database Replication",
+        "description":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed lectus et urna tincidunt euismod.",
+        "tags": [
+            "Relational Databases",
+            "PostgreSQL",
+            "SQL"
+        ]
+    },
+    {
+        "title": "Santorini Board Game",
+        "description":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed lectus et urna tincidunt euismod.",
+        "tags": [
+            "Java",
+            "ReactJs",
+            "OOP",
+            "Concurrency"
+        ]
     }
 ]
