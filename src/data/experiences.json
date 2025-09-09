@@ -2,7 +2,7 @@
   {
     "company": "Accenture",
     "logo": "/logos/accenture-logo.jpg",
-    "title": "Intern",
+    "title": "Consultant and Software Engineer Intern",
     "duration": "May 2025 - Aug 2025",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac rhoncus quam. Fringilla quam urna.",
     "link": "https://www.accenture.com"
@@ -10,7 +10,7 @@
   {
     "company": "Coda Payments",
     "logo": "/logos/coda-logo.jpg",
-    "title": "SWE Intern",
+    "title": "Software Engineer Intern",
     "duration": "May 2024 - Aug 2024",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac rhoncus quam. Fringilla quam urna.",
     "link": "https://www.coda.co/"

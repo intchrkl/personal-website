@@ -1,0 +1,55 @@
+[
+    {
+        "title": "NanoGPT",
+        "repoName": "nanogpt",
+        "description": "A small implementation of a GPT-style language model based on Andrej Karpathy's NanoGPT design with elements from Attention Is All You Need (Vaswani et al). Written using PyTorch. ",
+        "tech": [
+            "pyTorch",
+            "TensorFlow"
+        ],
+        "linkText": "View on GitHub",
+        "link": "https://github.com/intchrkl/nanogpt"
+    },
+    {
+        "title": "MNIST Digit Recognition",
+        "repoName": "digit-recog",
+        "description": "A Neural Network trained on MNIST data to recognize number handwriting. Built from scratch using numPy.",
+        "tech": [
+            "NumPy",
+            "Neural Networks"
+        ],
+        "linkText": "View on GitHub",
+        "link": "https://github.com/intchrkl/digit-recog"
+    },
+    {
+        "title": "Personal Website - tochirakul.com",
+        "repoName": "personal-website",
+        "description": "A clean, responsive site I built with React to share a bit about myself, my projects, and how to get in touch. It's hosted on GitHub Pages with custom routing, a custom domain, and uses many libraries for animations.",
+        "tech": [
+            "ReactJs",
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "JSON",
+            "DNS",
+            "GitHub Pages"
+        ],
+        "linkText": "View on GitHub",
+        "link": "https://github.com/intchrkl/personal-website"
+    },
+    {
+        "title": "Crime Tracker Web App",
+        "repoName": "crime-tracker",
+        "description": "A responsive full-stack web app to simulate a crime tracker portal utilizing MVC framework and OOP. Uses REST APIs to serve internal HTTP requests, update database, and trigger workflows. Features authentication and authorization, allowing users to log in and perform actions based on permissions.",
+        "tech": [
+            "Ruby on Rails",
+            "PostgreSQL",
+            "REST API",
+            "MVC",
+            "OOP",
+            "ReactJs"
+        ],
+        "linkText": "View on GitHub",
+        "link": "https://github.com/intchrkl/crime-tracker"
+    }
+]

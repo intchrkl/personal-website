@@ -13,6 +13,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import { FiChevronRight, FiChevronDown } from "react-icons/fi";
 import experiences from "../../data/experiences.json"
+import projects from "../../data/projects.json"
 
 
 
@@ -43,29 +44,50 @@ function AboutSection() {
   );
 }
 
-const projects = [
-  {
-    title: "NanoGPT",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed lectus et urna tincidunt euismod.",
-    image: "https://via.placeholder.com/600x300", // placeholder image
-    link: "#",
-    github: "#"
-  }
-  // Add more projects here
-];
+// const projects = [
+//   {
+//     title: "NanoGPT",
+//     description:
+//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed lectus et urna tincidunt euismod.",
+//     image: "asd",
+//     github: "https://github.com/intchrkl/nanogpt"
+//   },
+
+//   {
+//     title: "MNIST Digit Recognition",
+//     description:
+//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed lectus et urna tincidunt euismod.",
+//     image: "/mnist_img.png",
+//     github: "https://github.com/intchrkl/digit-recog"
+//   }
+// ];
 
 function ProjectsSection() {
   return (
     <section className="projects-section" id="projects">
       <div className="projects-layout">
-        <h2 className="section-title">Projects</h2>
+        <h2 className="section-title">My Projects</h2>
         <div className="project-list">
           {projects.map((project, index) => (
             <div key={index} className="project-card">
-              {/* <div className="project-thumbnail" /> */}
+              <div className="project-thumbnail">
+                <img
+                  src={project.image}
+                  alt={`${project.title} thumbnail`}
+                  style={{ width: "100%", borderRadius: "8px" }}
+                />
+              </div>
+              <br />
               <h3 className="project-title">{project.title}</h3>
               <p className="project-description">{project.description}</p>
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-button"
+                >
+                View on GitHub
+              </a>
             </div>
           ))}
         </div>
