@@ -284,6 +284,13 @@ p {
   line-height: 1.5;
 }
 
+.experience-skills {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #9aa0a6;
+  text-align: left;
+}
+
 .section-title {
   min-width: 150px;
   font-size: 2rem;

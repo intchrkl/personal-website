@@ -4,10 +4,15 @@
     "logo": "/logos/accenture-logo.jpg",
     "title": "Consultant and Software Engineer Intern",
     "duration": "May 2025 - Aug 2025",
-    "description": "Product and Software Engineer Intern for a large banking client. Worked on launching Virtual Bank platform.",
+    "description": "Product and Software Engineer Intern for a large banking client. Worked on launching Virtual Bank platform and developing APIs and microservices.",
     "link": "https://www.accenture.com",
     "skills": [
-
+      "Golang",
+      "Microservices",
+      "API Design",
+      "Customer Segmentation",
+      "Market Research",
+      "Requirement Gathering"
     ]
   },
   {
@@ -18,7 +23,13 @@
     "description": "Backend Software Engineer Intern. Worked on charge tokenization service and building an internal metrics tool for the product's webpage loading times.",
     "link": "https://www.coda.co/",
     "skills": [
-
+      "Java",
+      "JavaScript",
+      "A/B Testing",
+      "CI/CD Pipelines",
+      "Asynchronous Payment Processing",
+      "Charge Tokenization",
+      "Scalable System Design"
     ]
   },
   {
@@ -29,7 +40,11 @@
     "description": "Teaching Assistant for an introductory Data Structures and Algorithms course at Carnegie Mellon University. Taught labs, recitations, office hours, and worked on course materials.",
     "link": "https://www.cs.cmu.edu/~15122/",
     "skills": [
-
+      "C Programming",
+      "Data Structures & Algorithms",
+      "Unit Testing",
+      "Memory Management",
+      "Instruction & Facilitation"
     ]
   }
 ]

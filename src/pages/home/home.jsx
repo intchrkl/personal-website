@@ -164,7 +164,8 @@ function ExperienceSection() {
                 </p>
                 {Array.isArray(exp.skills) && exp.skills.length > 0 && (
                   <div className="experience-skills">
-                    {exp.skills.join(", ")}
+                    <br />
+                    <strong>Skills and Technologies: </strong> {exp.skills.join(", ")}
                   </div>
                 )}
               </div>
