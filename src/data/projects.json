@@ -1,31 +1,39 @@
 [
     {
-      "title": "NanoGPT",
-      "description":
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed lectus et urna tincidunt euismod.",
-      "image": "/transformer.png",
-      "github": "https://github.com/intchrkl/nanogpt",
-      "tags": [
-        "pyTorch",
-        "TensorFlow"
+        "title": "NanoGPT",
+        "description": "A small-scale AI that learns to generate text by predicting the next word in a sequence, showing how modern language models like ChatGPT are built. Starting from simple inputs, the model trains itself to recognize patterns and structure in text, eventually producing coherent continuations.\n\n Under the hood, this project is a from-scratch reimplementation of a GPT model in PyTorch, inspired by Attention Is All You Need. It explores the full transformer architecture including tokenization, embeddings, multi-head self-attention, positional encoding, and autoregressive training, but at a scale that runs on a single laptop GPU. The goal was to demystify how large-scale models work by building a functional version step by step.",
+        "image": "/transformer.png",
+        "github": "https://github.com/intchrkl/nanogpt",
+        "tags": [
+            "pyTorch",
+            "TensorFlow"
         ]
     },
-  
     {
-      "title": "MNIST Digit Recognition",
-      "description":
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed lectus et urna tincidunt euismod.",
-      "image": "/mnist_img.png",
-      "github": "https://github.com/intchrkl/digit-recog",
-      "tags": [
-        "NumPy",
-        "Neural Networks"
-      ]
+        "title": "MNIST Digit Recognition",
+        "description": "An interactive project that lets you draw a number and watch the model predict it in real time. This project was built to show how computers can learn to read handwriting.\n\n Under the hood, I implemented a neural network from scratch and trained it on the MNIST dataset of handwritten digits. The model uses layered transformations, activation functions, and a softmax classifier to map images to digit predictions. After training on thousands of examples, it generalizes well enough to recognize new handwriting inputs instantly.",
+        "image": "/mnist_img.png",
+        "github": "https://github.com/intchrkl/digit-recog",
+        "tags": [
+            "NumPy",
+            "Neural Networks"
+        ]
+    },
+    {
+        "title": "Computer Systems Simulator",
+        "description": "A collection of systems-level programs written in C to explore how operating systems and computer systems work. The project demonstrates how memory, processes, files, and networks are managed at a low level.\n\n I implemented a dynamic memory allocator to manage heap memory with high utilization and throughput. I also developed a multi-threaded Unix shell with process control, signal handling, and I/O redirection. In addition, I built a proxy server that forwards HTTP requests while handling concurrent connections and caching, a concurrent filesystem capable of managing simultaneous accesses, and an LRU cache simulator. Together, these components provided hands-on experience with concurrency, resource management, and systems programming.",
+        "tags": [
+            "C",
+            "Unix",
+            "Concurrency",
+            "HTTP",
+            "Proxy Servers",
+            "Process Control"
+        ]
     },
     {
         "title": "Personal Website - tochirakul.com",
-        "description":
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed lectus et urna tincidunt euismod.",
+        "description": "A central hub to share information about my work experiences and projects.\n\n The site is built with React with animations powered by Framer Motion. It includes a project gallery, GitHub integrations, and custom routing. The site is hosted on Vercel with a custom domain and can be updated easily as I add new projects.",
         "github": "https://github.com/intchrkl/personal-website",
         "tags": [
             "ReactJs",
@@ -39,12 +47,10 @@
     },
     {
         "title": "Crime Tracker Portal",
-        "description":
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed lectus et urna tincidunt euismod.",
+        "description": "A simulation of a police department web portal that displays information about crimes, criminals, and officers. It’s designed to show how such a system could organize and present data in a real-world setting.\n\n On the technical side, the portal was built with Ruby on Rails and a React frontend, connected to a relational database. I designed and implemented REST APIs to handle data exchange, applying MVC principles and object-oriented programming throughout the project.",
         "github": "https://github.com/intchrkl/crime-tracker",
         "tags": [
             "Ruby on Rails",
-            "PostgreSQL",
             "REST API",
             "MVC",
             "OOP",
@@ -52,32 +58,17 @@
         ]
     },
     {
-        "title": "Computer Systems Simulator",
-        "description":
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed lectus et urna tincidunt euismod.",
-        "tags": [
-            "C",
-            "Unix",
-            "Concurrency",
-            "HTTP",
-            "Proxy Servers",
-            "Process Control"
-        ]
-    },
-    {
         "title": "TikTok Relational Database Replication",
-        "description":
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed lectus et urna tincidunt euismod.",
+        "description": "A relational database built to simulate core TikTok features such as user profiles, video uploads, and interactions. The project demonstrates how social media platforms organize and manage large amounts of user-generated data.\n\n I designed the database schema in PostgreSQL using normalization techniques to ensure data integrity and efficiency. I also wrote Python scripts to execute SQL queries, simulating key functionalities like posting videos, following users, and tracking engagement.",
         "tags": [
             "Relational Databases",
-            "PostgreSQL",
-            "SQL"
+            "SQL",
+            "PostgreSQL"
         ]
     },
     {
         "title": "Santorini Board Game",
-        "description":
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed lectus et urna tincidunt euismod.",
+        "description": "A digital version of the strategy board game Santorini, built to recreate the gameplay experience in an online setting. Players can place, move, and build towers while competing to win, just like in the physical game.\n\n The project was developed using Java, TypeScript, and React, applying object-oriented programming, concurrency, and design patterns throughout. I wrote comprehensive unit tests with JUnit to achieve 100% line coverage, and deployed the application on Google Cloud using Docker containers for portability and scalability.",
         "tags": [
             "Java",
             "ReactJs",

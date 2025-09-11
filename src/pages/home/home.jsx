@@ -36,31 +36,13 @@ function AboutSection() {
         <h2 className="section-title">About Me</h2>
         <div className="about-content">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae nunc ut libero vestibulum accumsan. Praesent et purus vel massa tincidunt tincidunt ut in ligula. Proin eget dapibus lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+          Hi, I’m Intat Tochirakul — a software engineer with experience in fintech and consulting. I’ve worked on digital banking platforms, payment systems, and internal tools that improve how financial services run. Outside of tech, I enjoy Formula 1, watching Suits, and spending time with my dog. I’m also passionate about exploring AI, systems programming, and full-stack development, often through side projects that let me learn by building.
           </p>
         </div>
       </div>
     </section>
   );
 }
-
-// const projects = [
-//   {
-//     title: "NanoGPT",
-//     description:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed lectus et urna tincidunt euismod.",
-//     image: "asd",
-//     github: "https://github.com/intchrkl/nanogpt"
-//   },
-
-//   {
-//     title: "MNIST Digit Recognition",
-//     description:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed lectus et urna tincidunt euismod.",
-//     image: "/mnist_img.png",
-//     github: "https://github.com/intchrkl/digit-recog"
-//   }
-// ];
 
 function ProjectsSection() {
   return (
@@ -79,21 +61,23 @@ function ProjectsSection() {
               </div>)}
               {project.image && (<br />)}
               <h3 className="project-title">{project.title}</h3>
-              <p className="project-description">{project.description}</p>
+              {project.description.split("\n\n").map((para, i) => (
+                <p key={i} className="project-description">{para}</p>
+              ))}
               {/* {Array.isArray(project.tags) && (<br />)} */}
               {Array.isArray(project.tags) && project.tags.length > 0 && (
                 <div className="project-tags">
                   {project.tags.join(", ")}
                 </div>
               )}
-              {Array.isArray(project.tags) && (<br />)}
+              {/* {Array.isArray(project.tags) && (<br />)} */}
               {project.github && (
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="project-button"
-                  >
+                >
                   View on GitHub
                 </a>
               )}
@@ -175,7 +159,14 @@ function ExperienceSection() {
                 >
                   {exp.duration}
                 </p>
-                <p style={{ textAlign: "left", color: "white" }}>{exp.description}</p>
+                <p style={{ textAlign: "left", color: "white" }}>
+                  {exp.description}
+                </p>
+                {Array.isArray(exp.skills) && exp.skills.length > 0 && (
+                  <div className="experience-skills">
+                    {exp.skills.join(", ")}
+                  </div>
+                )}
               </div>
             </div>
           ))}
@@ -189,62 +180,62 @@ function ExperienceSection() {
 function BannerSection() {
   return (
     <div id="home">
-    <section className="hero-section">
-      <div className="hero-content">
-        <img src="/me.jpg" alt="Me" className="hero-image" />
-        <div className="hero-text">
-          <h1 style={{
-            fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
-            fontWeight: 400,
-            fontSize: "3rem",
-            marginBottom: "1rem",
-          }}>
-            <Typewriter
-              words={["Hello World", "I'm Intat", "Welcome!"]}
-              loop={Infinity}
-              cursor
-              cursorStyle="|"
-              typeSpeed={100}
-              deleteSpeed={60}
-              delaySpeed={1000}
-            />
-          </h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac rhoncus quam. Fringilla quam urna. Cras turpis elit, euismod eget ligula quis, imperdiet sagittis justo. In viverra fermentum ex ac vestibulum. Aliquam eleifend nunc a luctus porta. Mauris laoreet augue ut felis blandit, at iaculis odio ultrices. Nulla facilisi. Vestibulum cursus ipsum tellus, eu tincidunt neque tincidunt a.
-          </p>
-          <div className="social-bar">
-            <a
-              href="https://github.com/intchrkl"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-button"
-            >
-              <FaGithub className="social-icon" />
-              GitHub
-            </a>
-            <a
-              href="https://linkedin.com/in/intat"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-button"
-            >
-              <FaLinkedin className="social-icon" />
-              LinkedIn
-            </a>
-            <a
-              href="mailto:intat.tochirakul@gmail.com"
-              className="social-button"
-            >
-              <FiMail className="social-icon" />
-              Email
-            </a>
+      <section className="hero-section">
+        <div className="hero-content">
+          <img src="/me.jpg" alt="Me" className="hero-image" />
+          <div className="hero-text">
+            <h1 style={{
+              fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
+              fontWeight: 400,
+              fontSize: "3rem",
+              marginBottom: "1rem",
+            }}>
+              <Typewriter
+                words={["Hello World", "I'm Intat", "Welcome!"]}
+                loop={Infinity}
+                cursor
+                cursorStyle="|"
+                typeSpeed={100}
+                deleteSpeed={60}
+                delaySpeed={1000}
+              />
+            </h1>
+            <p>
+              Hi, I’m Intat, a software engineer with experience in fintech and consulting. I’ve worked on digital banking platforms, payment systems, and internal tools that improve how financial services run. Outside of tech, I enjoy Formula 1, watching Suits, and spending time with my dog. I’m also passionate about exploring AI, systems programming, and full-stack development through side projects that let me learn by building.
+            </p>
+            <div className="social-bar">
+              <a
+                href="https://github.com/intchrkl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-button"
+              >
+                <FaGithub className="social-icon" />
+                GitHub
+              </a>
+              <a
+                href="https://linkedin.com/in/intat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-button"
+              >
+                <FaLinkedin className="social-icon" />
+                LinkedIn
+              </a>
+              <a
+                href="mailto:intat.tochirakul@gmail.com"
+                className="social-button"
+              >
+                <FiMail className="social-icon" />
+                Email
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
     </div>
   );
-  
+
 }
 
 export default Home;

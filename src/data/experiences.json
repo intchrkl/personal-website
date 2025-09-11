@@ -4,23 +4,32 @@
     "logo": "/logos/accenture-logo.jpg",
     "title": "Consultant and Software Engineer Intern",
     "duration": "May 2025 - Aug 2025",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac rhoncus quam. Fringilla quam urna.",
-    "link": "https://www.accenture.com"
+    "description": "Product and Software Engineer Intern for a large banking client. Worked on launching Virtual Bank platform.",
+    "link": "https://www.accenture.com",
+    "skills": [
+
+    ]
   },
   {
     "company": "Coda Payments",
     "logo": "/logos/coda-logo.jpg",
     "title": "Software Engineer Intern",
     "duration": "May 2024 - Aug 2024",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac rhoncus quam. Fringilla quam urna.",
-    "link": "https://www.coda.co/"
+    "description": "Backend Software Engineer Intern. Worked on charge tokenization service and building an internal metrics tool for the product's webpage loading times.",
+    "link": "https://www.coda.co/",
+    "skills": [
+
+    ]
   },
   {
     "company": "CMU School of Computer Science",
     "logo": "/logos/scs-logo.jpg",
     "title": "Teaching Assistant",
     "duration": "Aug 2023 - Present",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac rhoncus quam. Fringilla quam urna.",
-    "link": "https://www.cs.cmu.edu/~15122/"
+    "description": "Teaching Assistant for an introductory Data Structures and Algorithms course at Carnegie Mellon University. Taught labs, recitations, office hours, and worked on course materials.",
+    "link": "https://www.cs.cmu.edu/~15122/",
+    "skills": [
+
+    ]
   }
 ]
