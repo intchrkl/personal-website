@@ -1,7 +1,7 @@
 [
     {
         "title": "NanoGPT",
-        "description": "A small-scale AI that learns to generate text by predicting the next word in a sequence, showing how modern language models like ChatGPT are built. Starting from simple inputs, the model trains itself to recognize patterns and structure in text, eventually producing coherent continuations.\n\n Under the hood, this project is a from-scratch reimplementation of a GPT model in PyTorch, inspired by Attention Is All You Need. It explores the full transformer architecture including tokenization, embeddings, multi-head self-attention, positional encoding, and autoregressive training, but at a scale that runs on a single laptop GPU. The goal was to demystify how large-scale models work by building a functional version step by step.",
+        "description": "A small-scale AI that learns to generate text by predicting the next word in a sequence, showing how modern language models like ChatGPT are built. Starting from simple inputs, the model trains itself to recognize patterns and structure in text, eventually producing coherent continuations.\n\n Under the hood, this project is a from-scratch reimplementation of a GPT model in PyTorch, inspired by Attention Is All You Need. It explores the full transformer architecture including tokenization, embeddings, multi-head self-attention, positional encoding, and autoregressive training, but at a scale that runs on a single laptop GPU. The goal was to understand how large-scale models work by building a functional version step by step.",
         "image": "/transformer.png",
         "github": "https://github.com/intchrkl/nanogpt",
         "tags": [
