@@ -75,5 +75,14 @@
             "OOP",
             "Concurrency"
         ]
+    },
+    {
+        "title": "NIKE DCF Valuation",
+        "description": "Conducted a comprehensive valuation of Nike’s stock using a 10-year DCF model. Built revenue and cash flow forecasts based on historical financial statements, growth assumptions, and market trends. Estimated the weighted average cost of capital (WACC) from Nike’s capital structure, beta, and market risk premium. Compared intrinsic value to market price to assess potential mispricing and investment implications.",
+        "tags": [
+            "DCF Modeling",
+            "Stocks",
+            "Finance"
+        ]
     }
 ]
