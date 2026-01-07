@@ -1,5 +1,17 @@
 [
     {
+        "title": "CatchUp iOS App",
+        "description": "CatchUp is a social iOS app that helps friends stay connected through thoughtful daily prompts. With a fast, vertical feed, streaks, and lightweight reactions, CatchUp turns small check-ins into meaningful conversations. Key features include daily prompts, a TikTok-style feed, streak-based engagement, emoji reactions, comments, and push notifications.",
+        "image": "/catchup.png",
+        "github": "https://github.com/intchrkl/catchup-ios",
+        "tags": [
+            "iOS",
+            "Swift",
+            "Firebase",
+            "Mobile Apps"
+        ]
+    },
+    {
         "title": "NanoGPT",
         "description": "A small-scale AI that learns to generate text by predicting the next word in a sequence, showing how modern language models like ChatGPT are built. Starting from simple inputs, the model trains itself to recognize patterns and structure in text, eventually producing coherent continuations.\n\n Under the hood, this project is a from-scratch reimplementation of a GPT model in PyTorch, inspired by Attention Is All You Need. It explores the full transformer architecture including tokenization, embeddings, multi-head self-attention, positional encoding, and autoregressive training, but at a scale that runs on a single laptop GPU. The goal was to understand how large-scale models work by building a functional version step by step.",
         "image": "/transformer.png",
