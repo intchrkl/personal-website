@@ -1,19 +1,14 @@
-import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import "./home.css";
-import { motion, AnimatePresence } from "framer-motion"
-import projectData from "../../data/projects.json";
-import { RepoLanguages } from "../../components/github/RepoLanguages"
-import { useState, useEffect, useRef } from "react";
-import { Banner } from "../../components/banner/Banner";
-import { ScrollIndicator } from "../../components/scroll/scroll"
+
 import { Navbar } from "../../components/navbar/Navbar";
-import { ProjectGallery } from "../../components/projectGallery/ProjectGallery";
+
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
-import { FiChevronRight, FiChevronDown } from "react-icons/fi";
-import experiences from "../../data/experiences.json"
-import projects from "../../data/projects.json"
+
+import experiences from "../../data/experiences.json";
+import projects from "../../data/projects.json";
+
 
 
 
